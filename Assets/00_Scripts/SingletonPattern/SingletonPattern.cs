@@ -8,9 +8,13 @@ public class SingletonPattern : MonoBehaviour
     {
         if (instance == null)
         {
-             instance = this;
-             
-             DontDestroyOnLoad(this.gameObject);
+            instance = this;
+
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
         }
     }
 }
